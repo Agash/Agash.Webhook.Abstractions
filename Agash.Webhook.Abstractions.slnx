@@ -1,0 +1,8 @@
+<Solution>
+  <Folder Name="/src/">
+    <Project Path="src/Agash.Webhook.Abstractions/Agash.Webhook.Abstractions.csproj" />
+  </Folder>
+  <Folder Name="/tests/">
+    <Project Path="tests/Agash.Webhook.Abstractions.Tests/Agash.Webhook.Abstractions.Tests.csproj" />
+  </Folder>
+</Solution>
