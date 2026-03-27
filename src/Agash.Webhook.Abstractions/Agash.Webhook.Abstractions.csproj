@@ -5,18 +5,30 @@
 		<Nullable>enable</Nullable>
 		<LangVersion>preview</LangVersion>
 		<TreatWarningsAsErrors>true</TreatWarningsAsErrors>
-		<GenerateDocumentationFile>true</GenerateDocumentationFile>
 		<IsPackable>true</IsPackable>
 		<PackageId>Agash.Webhook.Abstractions</PackageId>
 		<Title>Agash.Webhook.Abstractions</Title>
-		<Authors>Agash</Authors>
-		<Company>Agash</Company>
 		<Description>Transport-neutral webhook abstractions for .NET applications and provider libraries.</Description>
 		<PackageLicenseExpression>MIT</PackageLicenseExpression>
+		<PackageRequireLicenseAcceptance>false</PackageRequireLicenseAcceptance>
 		<RepositoryUrl>https://github.com/Agash/Agash.Webhook.Abstractions</RepositoryUrl>
 		<RepositoryType>git</RepositoryType>
-		<PackageRequireLicenseAcceptance>false</PackageRequireLicenseAcceptance>
+		<PackageProjectUrl>https://github.com/Agash/Agash.Webhook.Abstractions</PackageProjectUrl>
+		<PackageTags>webhook abstractions dotnet csharp</PackageTags>
+		<PackageReadmeFile>README.md</PackageReadmeFile>
+		<GenerateDocumentationFile>true</GenerateDocumentationFile>
 		<IncludeSymbols>true</IncludeSymbols>
 		<SymbolPackageFormat>snupkg</SymbolPackageFormat>
+		<MinVerTagPrefix>v</MinVerTagPrefix>
+		<PublishRepositoryUrl>true</PublishRepositoryUrl>
+		<EmbedUntrackedSources>true</EmbedUntrackedSources>
 	</PropertyGroup>
+	<ItemGroup>
+		<None Include="..\..\README.md" Pack="true" PackagePath="\" />
+		<None Include="..\..\LICENSE.txt" Pack="true" PackagePath="" />
+	</ItemGroup>
+	<ItemGroup>
+		<PackageReference Include="MinVer" Version="7.0.0" PrivateAssets="all" />
+		<PackageReference Include="DotNet.ReproducibleBuilds" Version="2.0.2" PrivateAssets="all" />
+	</ItemGroup>
 </Project>
