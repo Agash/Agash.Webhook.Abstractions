@@ -17,8 +17,6 @@
     <RepositoryUrl>https://github.com/Agash/Agash.Webhook.Abstractions</RepositoryUrl>
     <PackageProjectUrl>https://github.com/Agash/Agash.Webhook.Abstractions</PackageProjectUrl>
     <GenerateDocumentationFile Condition="'$(IsPackable)' == 'true'">true</GenerateDocumentationFile>
-    <IncludeSymbols Condition="'$(IsPackable)' == 'true'">true</IncludeSymbols>
-    <SymbolPackageFormat Condition="'$(IsPackable)' == 'true'">snupkg</SymbolPackageFormat>
     <PackageReadmeFile Condition="'$(IsPackable)' == 'true'">README.md</PackageReadmeFile>
   </PropertyGroup>
 
