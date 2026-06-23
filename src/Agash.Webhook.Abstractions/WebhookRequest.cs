@@ -12,7 +12,7 @@ namespace Agash.Webhook.Abstractions;
 /// </remarks>
 public sealed class WebhookRequest
 {
-    private static readonly IReadOnlyDictionary<string, string[]> EmptyHeaders =
+    private static readonly IReadOnlyDictionary<string, string[]> _emptyHeaders =
         new ReadOnlyDictionary<string, string[]>(new Dictionary<string, string[]>(StringComparer.OrdinalIgnoreCase));
 
     /// <summary>
@@ -56,7 +56,7 @@ public sealed class WebhookRequest
     /// <value>
     /// A case-insensitive mapping of header names to zero or more string values.
     /// </value>
-    public IReadOnlyDictionary<string, string[]> Headers { get; init; } = EmptyHeaders;
+    public IReadOnlyDictionary<string, string[]> Headers { get; init; } = _emptyHeaders;
 
     /// <summary>
     /// Gets the raw request body bytes.
