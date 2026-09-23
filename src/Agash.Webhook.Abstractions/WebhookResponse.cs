@@ -12,7 +12,9 @@ namespace Agash.Webhook.Abstractions;
 public sealed class WebhookResponse
 {
     private static readonly IReadOnlyDictionary<string, string[]> _emptyHeaders =
-        new ReadOnlyDictionary<string, string[]>(new Dictionary<string, string[]>(StringComparer.OrdinalIgnoreCase));
+        new ReadOnlyDictionary<string, string[]>(
+            new Dictionary<string, string[]>(StringComparer.OrdinalIgnoreCase)
+        );
 
     /// <summary>
     /// Gets the HTTP status code to return.

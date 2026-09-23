@@ -1,31 +1,31 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
-	<PropertyGroup>
-		<TargetFrameworks>net9.0;net10.0;net11.0</TargetFrameworks>
+  <PropertyGroup>
+    <TargetFrameworks>net9.0;net10.0;net11.0</TargetFrameworks>
     <IsAotCompatible>true</IsAotCompatible>
-		<ImplicitUsings>enable</ImplicitUsings>
-		<Nullable>enable</Nullable>
-		<LangVersion>preview</LangVersion>
-		<TreatWarningsAsErrors>true</TreatWarningsAsErrors>
-		<IsPackable>true</IsPackable>
-		<PackageId>Agash.Webhook.Abstractions</PackageId>
-		<Title>Agash.Webhook.Abstractions</Title>
-		<Description>Transport-neutral webhook abstractions for .NET applications and provider libraries.</Description>
-		<PackageLicenseExpression>MIT</PackageLicenseExpression>
-		<PackageRequireLicenseAcceptance>false</PackageRequireLicenseAcceptance>
-		<RepositoryUrl>https://github.com/Agash/Agash.Webhook.Abstractions</RepositoryUrl>
-		<RepositoryType>git</RepositoryType>
-		<PackageProjectUrl>https://github.com/Agash/Agash.Webhook.Abstractions</PackageProjectUrl>
-		<PackageTags>webhook abstractions dotnet csharp</PackageTags>
-		<PackageReadmeFile>README.md</PackageReadmeFile>
-		<GenerateDocumentationFile>true</GenerateDocumentationFile>
-		<MinVerTagPrefix>v</MinVerTagPrefix>
-		<EmbedUntrackedSources>true</EmbedUntrackedSources>
-	</PropertyGroup>
-	<ItemGroup>
-		<None Include="..\..\LICENSE.txt" Pack="true" PackagePath="" />
-	</ItemGroup>
-	<ItemGroup>
-		<PackageReference Include="MinVer" Version="8.0.0" PrivateAssets="all" />
-		<PackageReference Include="DotNet.ReproducibleBuilds" Version="2.0.5" PrivateAssets="all" />
-	</ItemGroup>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+    <LangVersion>preview</LangVersion>
+    <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
+    <IsPackable>true</IsPackable>
+    <PackageId>Agash.Webhook.Abstractions</PackageId>
+    <Title>Agash.Webhook.Abstractions</Title>
+    <Description>Transport-neutral webhook abstractions for .NET applications and provider libraries.</Description>
+    <PackageLicenseExpression>MIT</PackageLicenseExpression>
+    <PackageRequireLicenseAcceptance>false</PackageRequireLicenseAcceptance>
+    <RepositoryUrl>https://github.com/Agash/Agash.Webhook.Abstractions</RepositoryUrl>
+    <RepositoryType>git</RepositoryType>
+    <PackageProjectUrl>https://github.com/Agash/Agash.Webhook.Abstractions</PackageProjectUrl>
+    <PackageTags>webhook abstractions dotnet csharp</PackageTags>
+    <PackageReadmeFile>README.md</PackageReadmeFile>
+    <GenerateDocumentationFile>true</GenerateDocumentationFile>
+    <MinVerTagPrefix>v</MinVerTagPrefix>
+    <EmbedUntrackedSources>true</EmbedUntrackedSources>
+  </PropertyGroup>
+  <ItemGroup>
+    <None Include="..\..\LICENSE.txt" Pack="true" PackagePath="" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="MinVer" Version="8.0.0" PrivateAssets="all" />
+    <PackageReference Include="DotNet.ReproducibleBuilds" Version="2.0.5" PrivateAssets="all" />
+  </ItemGroup>
 </Project>
