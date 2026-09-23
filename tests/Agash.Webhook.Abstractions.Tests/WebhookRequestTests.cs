@@ -5,7 +5,8 @@ public sealed class WebhookRequestTests
 {
     private static WebhookRequest Build(
         string? contentType = null,
-        Dictionary<string, string[]>? headers = null) =>
+        Dictionary<string, string[]>? headers = null
+    ) =>
         new()
         {
             Method = "POST",
@@ -63,21 +64,23 @@ public sealed class WebhookRequestTests
     [TestMethod]
     [DataRow(null)]
     [DataRow("")]
-    public void GetFirstHeaderValue_WhenNameIsNullOrEmpty_Throws(string? name)
-        => Assert.Throws<ArgumentException>(() => Build().GetFirstHeaderValue(name!));
+    public void GetFirstHeaderValue_WhenNameIsNullOrEmpty_Throws(string? name) =>
+        Assert.Throws<ArgumentException>(() => Build().GetFirstHeaderValue(name!));
 
     [TestMethod]
     [DataRow("application/json", "application/json")]
     [DataRow("APPLICATION/JSON", "application/json")]
     [DataRow("application/json; charset=utf-8", "application/json")]
-    public void HasContentType_WhenPrefixMatches_ReturnsTrue(string contentType, string mediaType)
-        => Assert.IsTrue(Build(contentType).HasContentType(mediaType));
+    public void HasContentType_WhenPrefixMatches_ReturnsTrue(
+        string contentType,
+        string mediaType
+    ) => Assert.IsTrue(Build(contentType).HasContentType(mediaType));
 
     [TestMethod]
-    public void HasContentType_WhenContentTypeDiffers_ReturnsFalse()
-        => Assert.IsFalse(Build("text/plain").HasContentType("application/json"));
+    public void HasContentType_WhenContentTypeDiffers_ReturnsFalse() =>
+        Assert.IsFalse(Build("text/plain").HasContentType("application/json"));
 
     [TestMethod]
-    public void HasContentType_WhenContentTypeIsNull_ReturnsFalse()
-        => Assert.IsFalse(Build().HasContentType("application/json"));
+    public void HasContentType_WhenContentTypeIsNull_ReturnsFalse() =>
+        Assert.IsFalse(Build().HasContentType("application/json"));
 }

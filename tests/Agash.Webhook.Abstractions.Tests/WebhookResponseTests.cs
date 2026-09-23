@@ -6,12 +6,12 @@ namespace Agash.Webhook.Abstractions.Tests;
 public sealed class WebhookResponseTests
 {
     [TestMethod]
-    public void StatusCode_DefaultsTo200()
-        => Assert.AreEqual(200, new WebhookResponse().StatusCode);
+    public void StatusCode_DefaultsTo200() =>
+        Assert.AreEqual(200, new WebhookResponse().StatusCode);
 
     [TestMethod]
-    public void Headers_WhenNotSupplied_DefaultToEmpty()
-        => Assert.IsEmpty(new WebhookResponse().Headers);
+    public void Headers_WhenNotSupplied_DefaultToEmpty() =>
+        Assert.IsEmpty(new WebhookResponse().Headers);
 
     [TestMethod]
     public void Empty_ProducesStatusOnlyResponse()
@@ -44,6 +44,6 @@ public sealed class WebhookResponseTests
     }
 
     [TestMethod]
-    public void PlainText_WhenContentIsNull_Throws()
-        => Assert.Throws<ArgumentNullException>(() => WebhookResponse.PlainText(200, null!));
+    public void PlainText_WhenContentIsNull_Throws() =>
+        Assert.Throws<ArgumentNullException>(() => WebhookResponse.PlainText(200, null!));
 }

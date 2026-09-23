@@ -22,5 +22,6 @@ public interface IWebhookHandler<TEvent>
     /// </returns>
     Task<WebhookHandleResult<TEvent>> HandleAsync(
         WebhookRequest request,
-        CancellationToken cancellationToken = default);
+        CancellationToken cancellationToken = default
+    );
 }

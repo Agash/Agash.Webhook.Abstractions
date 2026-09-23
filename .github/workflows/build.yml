@@ -47,6 +47,11 @@ jobs:
     - name: Restore dependencies
       run: dotnet restore Agash.Webhook.Abstractions.slnx
 
+    - name: Check formatting
+      run: |
+        dotnet tool restore
+        dotnet csharpier check .
+
     - name: Build solution
       run: dotnet build Agash.Webhook.Abstractions.slnx --configuration Release --no-restore
 

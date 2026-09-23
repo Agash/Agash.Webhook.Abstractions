@@ -13,7 +13,9 @@ namespace Agash.Webhook.Abstractions;
 public sealed class WebhookRequest
 {
     private static readonly IReadOnlyDictionary<string, string[]> _emptyHeaders =
-        new ReadOnlyDictionary<string, string[]>(new Dictionary<string, string[]>(StringComparer.OrdinalIgnoreCase));
+        new ReadOnlyDictionary<string, string[]>(
+            new Dictionary<string, string[]>(StringComparer.OrdinalIgnoreCase)
+        );
 
     /// <summary>
     /// Gets the HTTP method used by the inbound request.
@@ -97,7 +99,7 @@ public sealed class WebhookRequest
     {
         ArgumentException.ThrowIfNullOrEmpty(mediaType);
 
-        return ContentType is not null &&
-               ContentType.StartsWith(mediaType, StringComparison.OrdinalIgnoreCase);
+        return ContentType is not null
+            && ContentType.StartsWith(mediaType, StringComparison.OrdinalIgnoreCase);
     }
 }
