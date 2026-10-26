@@ -1,4 +1,4 @@
-﻿<Project Sdk="Microsoft.NET.Sdk">
+<Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
     <TargetFrameworks>net9.0;net10.0;net11.0</TargetFrameworks>
     <IsAotCompatible>true</IsAotCompatible>
@@ -25,7 +25,7 @@
     <None Include="..\..\LICENSE.txt" Pack="true" PackagePath="" />
   </ItemGroup>
   <ItemGroup>
-    <PackageReference Include="MinVer" Version="8.0.0" PrivateAssets="all" />
-    <PackageReference Include="DotNet.ReproducibleBuilds" Version="2.0.5" PrivateAssets="all" />
+    <PackageReference Include="MinVer" PrivateAssets="all" />
+    <PackageReference Include="DotNet.ReproducibleBuilds" PrivateAssets="all" />
   </ItemGroup>
 </Project>
